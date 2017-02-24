@@ -1,1 +1,1 @@
-include ':app', ':lib-logger', ':app-mvp'
+include ':app', ':lib-logger', ':app-mvp', ':lib-utils'
