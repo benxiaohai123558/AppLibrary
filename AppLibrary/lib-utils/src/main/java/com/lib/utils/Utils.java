@@ -2,6 +2,8 @@ package com.lib.utils;
 
 import android.content.Context;
 
+import com.lib.utils.android.json.JsonUtils;
+
 /**
  * Author : Guazi
  * Time: 17/2/24
@@ -27,6 +29,7 @@ public class Utils {
     public static void init(Context context, String shareName) {
         Utils.context = context;
         Utils.shareName = shareName;
+        new JsonUtils();
     }
 
     /**
