@@ -31,7 +31,7 @@ import java.util.zip.ZipOutputStream;
 public class ZipUtils {
 
     private ZipUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("ZipUtils can't instantiate");
     }
 
     /**

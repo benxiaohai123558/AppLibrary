@@ -8,17 +8,14 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/7
- *     desc  : Shell相关工具类
- * </pre>
+ * Author : Guazi
+ * Time: 17/2/24
+ * desc  : Shell相关工具类
  */
 public class ShellUtils {
 
     private ShellUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("ShellUtils can't instantiate");
     }
 
     /**

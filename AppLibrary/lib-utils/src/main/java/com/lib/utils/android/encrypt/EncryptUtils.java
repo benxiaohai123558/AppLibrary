@@ -22,17 +22,14 @@ import static com.lib.utils.java.io.ConvertUtils.bytes2HexString;
 import static com.lib.utils.java.io.ConvertUtils.hexString2Bytes;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/2
- *     desc  : 加密解密相关的工具类
- * </pre>
+ * author: Guazi.
+ * time  : 2017/2/25.
+ * desc  : 加密解密相关的工具类
  */
 public class EncryptUtils {
 
     private EncryptUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("EncryptUtils can't instantiate");
     }
 
     /*********************** 哈希加密相关 ***********************/

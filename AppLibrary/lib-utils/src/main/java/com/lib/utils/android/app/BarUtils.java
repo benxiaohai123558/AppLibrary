@@ -17,17 +17,14 @@ import android.widget.LinearLayout;
 import java.lang.reflect.Method;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/9/23
- *     desc  : 栏相关工具类
- * </pre>
+ * author: Guazi.
+ * time  : 2017/2/25.
+ * desc  : 栏相关工具类
  */
 public class BarUtils {
 
     private BarUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("BarUtils can't instantiate");
     }
 
     public static class StatusBarView extends View {

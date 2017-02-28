@@ -26,17 +26,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/2
- *     desc  : App相关工具类
- * </pre>
+ * author: Guazi.
+ * time  : 2017/2/25.
+ * desc  : App相关工具类
  */
 public class AppUtils {
 
     private AppUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("AppUtils can't instantiate");
     }
 
     /**

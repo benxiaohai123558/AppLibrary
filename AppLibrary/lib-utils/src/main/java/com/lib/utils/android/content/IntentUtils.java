@@ -16,17 +16,14 @@ import com.lib.utils.java.io.FileUtils;
 import java.io.File;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/9/23
- *     desc  : 意图相关工具类
- * </pre>
+ * author: Guazi.
+ * time  : 2017/2/25.
+ * desc  : 意图相关工具类
  */
 public class IntentUtils {
 
     private IntentUtils() {
-        throw new UnsupportedOperationException("u can't fuck me...");
+        throw new UnsupportedOperationException("IntentUtils can't instantiate");
     }
 
     /**

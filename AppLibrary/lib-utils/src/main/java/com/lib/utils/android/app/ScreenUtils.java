@@ -15,17 +15,14 @@ import android.view.WindowManager;
 import com.lib.utils.Utils;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/2
- *     desc  : 屏幕相关工具类
- * </pre>
+ * author: Guazi.
+ * time  : 2017/2/25.
+ * desc  : 屏幕相关工具类
  */
 public class ScreenUtils {
 
     private ScreenUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("ScreenUtils can't instantiate");
     }
 
     /**

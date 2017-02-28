@@ -24,17 +24,14 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/2
- *     desc  : 网络相关工具类
- * </pre>
+ * author: Guazi.
+ * time  : 2017/2/25.
+ * desc  : 网络相关工具类
  */
 public class NetworkUtils {
 
     private NetworkUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("NetworkUtils can't instantiate");
     }
 
     public enum NetworkType {

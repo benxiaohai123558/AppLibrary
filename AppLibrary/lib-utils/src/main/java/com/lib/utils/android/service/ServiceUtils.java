@@ -11,17 +11,14 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/2
- *     desc  : 服务相关工具类
- * </pre>
+ * Author : Guazi
+ * Time: 17/2/24
+ * desc  : 服务相关工具类
  */
 public class ServiceUtils {
 
     private ServiceUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("ServiceUtils can't instantiate");
     }
 
     /**

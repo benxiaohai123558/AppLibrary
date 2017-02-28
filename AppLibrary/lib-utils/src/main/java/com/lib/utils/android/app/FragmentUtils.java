@@ -27,7 +27,7 @@ import java.util.List;
 public class FragmentUtils {
 
     private FragmentUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("FragmentUtils can't instantiate");
     }
 
     private static final int TYPE_ADD_FRAGMENT       = 0x01;

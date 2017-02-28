@@ -9,17 +9,14 @@ import android.net.Uri;
 import com.lib.utils.Utils;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/9/25
- *     desc  : 剪贴板相关工具类
- * </pre>
+ * author: Guazi.
+ * time  : 2017/2/25.
+ * desc  : 剪贴板相关工具类
  */
 public class ClipboardUtils {
 
     private ClipboardUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("ClipboardUtils can't instantiate");
     }
 
     /**

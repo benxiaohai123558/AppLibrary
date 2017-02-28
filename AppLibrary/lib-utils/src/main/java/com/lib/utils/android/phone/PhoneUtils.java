@@ -26,17 +26,14 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/2
- *     desc  : 手机相关工具类
- * </pre>
+ * author: Guazi.
+ * time  : 2017/2/25.
+ * desc  : 手机相关工具类
  */
 public class PhoneUtils {
 
     private PhoneUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("PhoneUtils can't instantiate");
     }
 
     /**

@@ -18,17 +18,14 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/1
- *     desc  : 设备相关工具类
- * </pre>
+ * author: Guazi.
+ * time  : 2017/2/25.
+ * desc  : 设备相关工具类
  */
 public class DeviceUtils {
 
     private DeviceUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("DeviceUtils can't instantiate");
     }
 
     /**

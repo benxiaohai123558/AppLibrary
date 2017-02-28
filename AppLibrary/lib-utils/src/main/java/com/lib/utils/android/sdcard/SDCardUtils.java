@@ -14,17 +14,14 @@ import java.io.File;
 import java.io.InputStreamReader;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/11
- *     desc  : SD卡相关工具类
- * </pre>
+ * Author : Guazi
+ * Time: 17/2/24
+ * desc  : SD卡相关工具类
  */
 public class SDCardUtils {
 
     private SDCardUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("SDCardUtils can't instantiate");
     }
 
     /**

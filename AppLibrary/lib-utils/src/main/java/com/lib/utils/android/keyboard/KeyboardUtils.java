@@ -10,17 +10,14 @@ import android.widget.EditText;
 import com.lib.utils.Utils;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/2
- *     desc  : 键盘相关工具类
- * </pre>
+ * author: Guazi.
+ * time  : 2017/2/25.
+ * desc  : 键盘相关工具类
  */
 public class KeyboardUtils {
 
     private KeyboardUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("KeyboardUtils can't instantiate");
     }
 
     /**

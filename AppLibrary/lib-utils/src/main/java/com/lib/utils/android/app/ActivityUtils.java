@@ -18,17 +18,14 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/9/23
- *     desc  : Activity相关工具类
- * </pre>
+ * author: Guazi.
+ * time  : 2017/2/25.
+ * desc  : Activity相关工具类
  */
 public class ActivityUtils {
 
     private ActivityUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("ActivityUtils can't instantiate");
     }
 
     /**

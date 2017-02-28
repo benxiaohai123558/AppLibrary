@@ -51,17 +51,14 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/12
- *     desc  : 图片相关工具类
- * </pre>
+ * author: Guazi.
+ * time  : 2017/2/25.
+ * desc  : 图片相关工具类
  */
 public class ImageUtils {
 
     private ImageUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+        throw new UnsupportedOperationException("ImageUtils can't instantiate");
     }
 
     /**
