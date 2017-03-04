@@ -18,8 +18,8 @@ import javax.crypto.Cipher;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
-import static com.lib.utils.java.io.ConvertUtils.bytes2HexString;
-import static com.lib.utils.java.io.ConvertUtils.hexString2Bytes;
+import static com.lib.utils.java.io.IOUtils.bytes2HexString;
+import static com.lib.utils.java.io.IOUtils.hexString2Bytes;
 
 /**
  * author: Guazi.

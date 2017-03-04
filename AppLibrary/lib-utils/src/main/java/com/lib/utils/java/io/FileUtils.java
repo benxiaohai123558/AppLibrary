@@ -931,7 +931,7 @@ public class FileUtils {
     public static byte[] readFile2Bytes(File file) {
         if (file == null) return null;
         try {
-            return ConvertUtils.inputStream2Bytes(new FileInputStream(file));
+            return IOUtils.inputStream2Bytes(new FileInputStream(file));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             return null;
@@ -1052,7 +1052,7 @@ public class FileUtils {
      */
     public static String getDirSize(File dir) {
         long len = getDirLength(dir);
-        return len == -1 ? "" : ConvertUtils.byte2FitMemorySize(len);
+        return len == -1 ? "" : IOUtils.byte2FitMemorySize(len);
     }
 
     /**
@@ -1073,7 +1073,7 @@ public class FileUtils {
      */
     public static String getFileSize(File file) {
         long len = getFileLength(file);
-        return len == -1 ? "" : ConvertUtils.byte2FitMemorySize(len);
+        return len == -1 ? "" : IOUtils.byte2FitMemorySize(len);
     }
 
     /**
@@ -1158,7 +1158,7 @@ public class FileUtils {
      * @return 文件的MD5校验码
      */
     public static String getFileMD5ToString(File file) {
-        return ConvertUtils.bytes2HexString(getFileMD5(file));
+        return IOUtils.bytes2HexString(getFileMD5(file));
     }
 
     /**

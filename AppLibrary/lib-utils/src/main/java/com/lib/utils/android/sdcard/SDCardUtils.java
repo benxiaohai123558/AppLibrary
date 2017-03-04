@@ -6,7 +6,7 @@ import android.os.Environment;
 import android.os.StatFs;
 
 import com.lib.utils.java.io.CloseUtils;
-import com.lib.utils.java.io.ConvertUtils;
+import com.lib.utils.java.io.IOUtils;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -89,7 +89,7 @@ public class SDCardUtils {
         long blockSize, availableBlocks;
         availableBlocks = stat.getAvailableBlocksLong();
         blockSize = stat.getBlockSizeLong();
-        return ConvertUtils.byte2FitMemorySize(availableBlocks * blockSize);
+        return IOUtils.byte2FitMemorySize(availableBlocks * blockSize);
     }
 
     /**
