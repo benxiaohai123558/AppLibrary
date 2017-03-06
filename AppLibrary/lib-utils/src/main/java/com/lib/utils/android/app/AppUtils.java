@@ -608,4 +608,40 @@ public class AppUtils {
         }
         return isSuccess;
     }
+
+    /**
+     * 获取Manifest Meta Data
+     *
+     * @param context
+     * @param metaKey
+     * @return
+     */
+    public static String getMetaData(Context context, String metaKey) {
+        String name = context.getPackageName();
+        ApplicationInfo appInfo;
+        String msg = "";
+        try {
+            appInfo = context.getPackageManager().getApplicationInfo(name, PackageManager.GET_META_DATA);
+            msg = appInfo.metaData.getString(metaKey);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        if (StringUtils.isEmpty(msg)) {
+            return "";
+        }
+
+        return msg;
+    }
+
+    /**
+     * 获得渠道号
+     *
+     * @param context
+     * @param channelKey
+     * @return
+     */
+    public static String getChannelNo(Context context, String channelKey) {
+        return getMetaData(context, channelKey);
+    }
 }

@@ -42,10 +42,14 @@ public class ShareUtils {
      */
     public static ShareUtils getInstance() {
         if (shareUtils == null) {
-            if (StringUtils.isEmpty(Utils.getShareName())) {
-                throw new NullPointerException("shareName is not null or empty");
+            synchronized (ShareUtils.class) {
+                if (shareUtils == null) {
+                    if (StringUtils.isEmpty(Utils.getShareName())) {
+                        throw new NullPointerException("shareName is not null or empty");
+                    }
+                    shareUtils = new ShareUtils(Utils.getShareName());
+                }
             }
-            shareUtils = new ShareUtils(Utils.getShareName());
         }
         return shareUtils;
     }
