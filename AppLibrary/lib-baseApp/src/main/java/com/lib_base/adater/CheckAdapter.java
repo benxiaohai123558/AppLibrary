@@ -20,6 +20,8 @@ import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.CompoundButton;
 
+import com.lib_base.adater.inter.ICheckItem;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -30,7 +32,7 @@ import java.util.List;
  * Desc   : 选择适配器
  * <p>
  * <br>准备工作：
- * <br>第一步：创建你的Item并实现CheckAdapter.CheckItem接口
+ * <br>第一步：创建你的Item并实现ICheckItem接口
  * <br>第二步：创建你的适配器并继承于CheckAdapter并同时通过泛型指定Item类型
  * <br>第三步：在构造函数中传给父类Item集合
  * <br>第四步：在getView()方法中调用handleCheckBox()方法处理CheckBox
@@ -45,7 +47,7 @@ import java.util.List;
  * <br>调用getCheckedItems()方法获取全部选中的项
  * <br>调用deleteCheckedItems()方法删除全部选中的项
  */
-public abstract class CheckAdapter<T extends CheckAdapter.CheckItem> extends BaseAdapter {
+public abstract class CheckAdapter<T extends ICheckItem> extends BaseAdapter {
     private List<T> items;    //列表项
     private boolean enabledCheckMode;    //激活选择模式
     private boolean singleMode;    //单选模式
@@ -207,9 +209,4 @@ public abstract class CheckAdapter<T extends CheckAdapter.CheckItem> extends Bas
         return checkedItems;
     }
 
-    public interface CheckItem {
-        boolean isChecked();
-
-        void setChecked(boolean checked);
-    }
 }

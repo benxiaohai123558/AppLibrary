@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/AppLibrary.iml" filepath="$PROJECT_DIR$/AppLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-mvp/app-mvp.iml" filepath="$PROJECT_DIR$/app-mvp/app-mvp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib-baseApp/lib-baseapp.iml" filepath="$PROJECT_DIR$/lib-baseApp/lib-baseapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-baseApp/lib-baseApp.iml" filepath="$PROJECT_DIR$/lib-baseApp/lib-baseApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib-logger/lib-logger.iml" filepath="$PROJECT_DIR$/lib-logger/lib-logger.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib-utils/lib-utils.iml" filepath="$PROJECT_DIR$/lib-utils/lib-utils.iml" />
     </modules>

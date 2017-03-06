@@ -47,6 +47,16 @@ public class PhoneUtils {
     }
 
     /**
+     * 获取手机号码
+     *
+     * @param context 上下文
+     * @return 手机号码，手机号码不一定能获取到
+     */
+    public static String getMobilePhoneNumber(Context context) {
+        return ((TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE)).getLine1Number();
+    }
+
+    /**
      * 获取IMEI码
      * <p>需添加权限 {@code <uses-permission android:name="android.permission.READ_PHONE_STATE"/>}</p>
      *
