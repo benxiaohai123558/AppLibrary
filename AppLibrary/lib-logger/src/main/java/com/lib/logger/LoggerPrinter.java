@@ -1,15 +1,20 @@
 package com.lib.logger;
 
-import com.lib.logger.constants.LoggerConstants;
 import com.lib.logger.config.LoggerConfig;
+import com.lib.logger.constants.LoggerConstants;
+import com.lib.logger.inter.IPrinter;
 import com.lib.logger.util.LoggerUtil;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Source;
@@ -63,6 +68,8 @@ public class LoggerPrinter implements IPrinter {
     private final ThreadLocal<Integer> localMethodCount = new ThreadLocal<>();
 
     private LoggerConfig loggerConfig = new LoggerConfig();
+
+    private File logFile;
 
     public LoggerPrinter() {
         init(LoggerConstants.DEFAULT_TAG);
@@ -322,6 +329,7 @@ public class LoggerPrinter implements IPrinter {
 
     private void logChunk(int logType, String tag, String chunk) {
         String finalTag = tag;
+        printFile(tag, chunk);
         switch (logType) {
             case ERROR:
                 loggerConfig.getLogger().e(finalTag, chunk);
@@ -347,4 +355,48 @@ public class LoggerPrinter implements IPrinter {
         }
     }
 
+    private void printFile(String tag, String logVaule) {
+        if (!loggerConfig.isPrintFile()) {
+            return;
+        }
+        if (!LoggerUtil.isSDCardEnable()) return;
+        try {
+            File fileRoot = LoggerUtil.createLogFile(loggerConfig.getLogFilePath());
+            String name = LoggerUtil.formatAsYearToDay(new Date(System.currentTimeMillis()));
+            File file = LoggerUtil.createLogFile(fileRoot, String.format("%s%s", name, LoggerConstants.DEFAULT_SUFFIX));
+            LoggerUtil.writeFile(file, String.format("%s%s", tag, "\n"));
+            LoggerUtil.writeFile(file, String.format("%s%s", logVaule, "\n"));
+        } catch (Exception e) {
+            e(e);
+        }
+    }
+
+    @Deprecated
+    public boolean clearLogFile() {
+        try {
+            List<File> files = LoggerUtil.listFilesInDir(LoggerUtil.createLogFile(loggerConfig.getLogFilePath()));
+            if (files != null && !files.isEmpty()) {
+                List<File> tempFile = new CopyOnWriteArrayList<>();
+                Date nowData = new Date(System.currentTimeMillis());
+                for (File file : files) {
+                    String name = null;
+                    if (file.getName().contains(".")) {
+                        name = file.getName().substring(0, file.getName().indexOf("."));
+                    }
+                    if (name == null) return false;
+                    Date d = LoggerUtil.parse(name);
+                    if (LoggerUtil.getDateByDayOffset(d, loggerConfig.getDate()).compareTo(nowData) < 0) {
+                        tempFile.add(file);
+                    }
+                }
+                for (File file : tempFile) {
+                    file.delete();
+                }
+                return true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

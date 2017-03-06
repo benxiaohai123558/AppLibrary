@@ -1,4 +1,4 @@
-package com.lib.logger;
+package com.lib.logger.inter;
 
 /**
  * author: Guazi.

@@ -1,4 +1,4 @@
-package com.lib.logger;
+package com.lib.logger.inter;
 
 import com.lib.logger.config.LoggerConfig;
 
@@ -32,4 +32,6 @@ public interface IPrinter {
     void json(String json);
 
     void xml(String xml);
+
+    boolean clearLogFile();
 }

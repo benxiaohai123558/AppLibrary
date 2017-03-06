@@ -1,6 +1,6 @@
 package com.lib.logger.log;
 
-import com.lib.logger.ILogger;
+import com.lib.logger.inter.ILogger;
 
 /**
  * author: Guazi.

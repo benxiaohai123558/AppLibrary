@@ -2,7 +2,7 @@ package com.lib.logger.log;
 
 import android.util.Log;
 
-import com.lib.logger.ILogger;
+import com.lib.logger.inter.ILogger;
 
 /**
  * author: Guazi.

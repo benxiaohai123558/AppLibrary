@@ -1,9 +1,8 @@
 package com.lib.logger;
 
-import android.support.annotation.NonNull;
-
 import com.lib.logger.constants.LoggerConstants;
 import com.lib.logger.config.LoggerConfig;
+import com.lib.logger.inter.IPrinter;
 
 /**
  * author: Guazi.
@@ -68,5 +67,9 @@ public class Logger {
 
     public static void xml(String xml) {
         printer.xml(xml);
+    }
+
+    public static void clearLogFile(){
+        printer.clearLogFile();
     }
 }
